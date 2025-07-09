@@ -35,7 +35,7 @@ def about():
 def places():
   return render_template('places.html', subtitle='Places I\'ve Been', text='Take a look at where I was this spring!')
 
-
+#test
 @app.route("/register", methods=['GET', 'POST'])
 def register():
     form = RegistrationForm()
