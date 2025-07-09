@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <div class="flash-message alert alert-{{ category }}">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+    <h2 class="subtitle">{{ subtitle }}</h2>
+    <p class="subtext">{{ text }}</p>
+    <p class="subtext" style="text-size:small;"> {{ command }} <p>
+    <script>
+      setTimeout(function() {
+        document.querySelectorAll('.flash-message').forEach(function(el) {
+          el.style.display = 'none';
+        });
+      }, 3000);
+    </script>
+{% endblock content %}
