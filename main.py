@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 import git
 
 app = Flask(__name__)
-proxied = FlaskBehindProxy(app)  ## add this line
+proxied = FlaskBehindProxy(app)
 app.config['SECRET_KEY'] = '1e3a138e2853594f9489e60de470ed60'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 db = SQLAlchemy(app)
