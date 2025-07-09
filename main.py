@@ -10,7 +10,7 @@ app.config['SECRET_KEY'] = '1e3a138e2853594f9489e60de470ed60'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 db = SQLAlchemy(app)
 
-class User(db.Model):
+class User(db.Model): #hi
   id = db.Column(db.Integer, primary_key=True)
   username = db.Column(db.String(20), unique=True, nullable=False)
   email = db.Column(db.String(120), unique=True, nullable=False)
